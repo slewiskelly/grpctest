@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package reverse.v1;
+
+option go_package = "github.com/slewiskelly/grpctest/internal/testdata/api/reverse/v1;reverse";
+
+service ReverseService {
+  rpc Reverse(Request) returns (Response);
+}
+
+message Request {
+  string message = 1;
+}
+
+message Response {
+  string message = 1;
+}

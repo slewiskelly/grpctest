@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package echo.v1;
+
+option go_package = "github.com/slewiskelly/grpctest/internal/testdata/api/echo/v1;echo";
+
+service EchoService {
+  rpc Echo(Request) returns (Response);
+}
+
+message Request {
+  string message = 1;
+}
+
+message Response {
+  string message = 1;
+}
